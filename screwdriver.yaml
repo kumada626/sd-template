@@ -1,0 +1,7 @@
+jobs:
+    publish_templates:
+        image: node:12
+        steps:
+            - install: npm i -g screwdriver-template-main
+            - publish: template-publish
+        requires: [~commit]
